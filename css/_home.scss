@@ -1,0 +1,46 @@
+.container-de-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    width: 40vw;
+    text-align: center;
+    padding: 5px;
+    color: $color02;
+
+    .texto {
+        height: 100%;
+        min-width: 275px;
+        max-width: 295px;
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    button {
+        font-size: 1.5rem;
+        height: 80px;
+        min-width: 275px;
+        width: 20vw;
+        border-radius: 40px;
+        border: none;
+        outline: none;
+        background: $color05;
+
+        &:hover {
+            background: lighten($color05, $amount: 10);
+        }
+    }
+}
+
+picture {
+    width: 60vw;
+    text-align: center;
+}

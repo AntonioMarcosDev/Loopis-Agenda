@@ -1,1 +1,83 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+/*Variáveis*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rufina", serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background: #373030;
+}
+body a,
+body button {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .container {
+    width: 100vw;
+    margin: 30px 0px;
+    padding: 0;
+  }
+  picture {
+    width: 100vw;
+    text-align: center;
+  }
+}
+.container-de-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh;
+  width: 40vw;
+  text-align: center;
+  padding: 5px;
+  color: #E7E7E7;
+}
+.container-de-texto .texto {
+  height: 100%;
+  min-width: 275px;
+  max-width: 295px;
+}
+.container-de-texto .texto h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+.container-de-texto .texto p {
+  font-size: 1.5rem;
+}
+.container-de-texto button {
+  font-size: 1.5rem;
+  height: 80px;
+  min-width: 275px;
+  width: 20vw;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  background: #F2C46D;
+}
+.container-de-texto button:hover {
+  background: #f6d79c;
+}
+
+picture {
+  width: 60vw;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
