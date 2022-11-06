@@ -4,10 +4,104 @@ $color02: #E7E7E7;
 $color03: #C5C5C4;
 $color04: #AFAEAE;
 $color05: #F2C46D;
-$color06: #4EBF6B;
-$color07: #F26363;
-$color08: #202148;
+$color06: #FEDB71;
+$color07: #4EBF6B;
+$color08: #F26363;
+$color09: #202148;
 
 @import 'base';
-@import 'responsive';
 @import 'home';
+@import 'telas';
+
+.container-de-dias {
+    background: $color09;
+    height: 100vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    .area-de-dias {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+
+        .dias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: $color02;
+            text-align: center;
+            height: 14vh;
+            width: 12vw;
+            border-radius: 20px;
+
+            #hoje-de-dias {
+                background: $color04;
+                line-height: 30px;
+                width: 8vw;
+                margin-top: 30px;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    #adicionar-de-dias {
+        background: $color06;
+        height: 50px;
+        width: 50px;
+        border-radius: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+
+        &:hover {
+            background: lighten($color06, $amount: 10);
+        }
+    }
+}
+
+.container-de-tarefas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 85vw;
+
+    .area-de-tarefas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 85%;
+        width: 85%;
+        background: $color03;
+        padding: 20px;
+
+        .titulo-de-tarefas {
+            background: $color04;
+            text-align: center;
+            width: 20vw;
+            border-radius: 20px;
+            font-size: 1.2rem;
+        }
+
+        #adicionar-de-tarefas {
+            height: 5vh;
+            width: 20vw;
+            font-size: 1.2rem;
+            background: $color06;
+            border-radius: 20px;
+            margin-bottom: 80px;
+
+            &:hover {
+                background: lighten($color06, $amount: 10);
+            }
+        }
+    }
+}

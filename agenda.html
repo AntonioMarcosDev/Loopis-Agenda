@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rufina&display=swap">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Loopis Agenda</title>
+</head>
+
+<body>
+    <div class="container-de-dias">
+        <div class="area-de-dias">
+            <button class="dias">
+                <h1></h1>
+                <p></p>
+                <p id="hoje-de-dias">Hoje</p>
+            </button>
+
+        </div>
+        <button id="adicionar-de-dias">+</button>
+    </div>
+    <div class="container-de-tarefas">
+        <div class="area-de-tarefas">
+            <div class="titulo-de-tarefas">
+                <h1>Atividades do dia:</h1>
+                <p class="hoje-de-tarefas"></p>
+            </div>
+            <div class="tarefas">
+            </div>
+            <button id="adicionar-de-tarefas">Insira um nova atividade do dia</button>
+        </div>
+    </div>
+    <div class="tela-de-adicionar">
+        <div class="container-de-adicionar">
+            <h1>Nova Atividade</h1>
+            <label for="nome-da-tarefa">Nome:</label>
+            <input type="text" id="nome-da-tarefa" placeholder="Escreva a atividade">
+            <label for="tarefa">Descrição:</label>
+            <input type="text" id="tarefa" placeholder="Escreva a descrição">
+            <label for="data">Data:</label>
+            <input type="date" name="" id="data">
+            <button id="adicionar-de-adicionar">Adicionar</button>
+        </div>
+    </div>
+    <div class="tela-de-editar">
+        <div class="container-de-editar">
+            <div class="texto-de-editar">
+                <h1>Atividade:</h1>
+                <p></p>
+            </div>
+            <label for="nome-da-tarefa">Nome:</label>
+            <input type="text" id="nome-da-tarefa" placeholder="Escreva a atividade">
+            <label for="tarefa">Descrição:</label>
+            <input type="text" id="tarefa" placeholder="Escreva a descrição">
+            <label for="data">Data:</label>
+            <input type="date" name="" id="data">
+            <button id="cancelar-de-editar">Cancelar</button>
+            <button id="salvar-de-editar">Salvar</button>
+        </div>
+    </div>
+    <div class="tela-de-excluir">
+        <p>Deseja excluir a seguinte atividade:</p>
+        <p id="atividade"></p>
+        <button id="cancelar-de-excluir">Cancelar</button>
+        <button id="eexcluir-de-exclir">Excluir</button>
+    </div>
+</body>
+
+</html>

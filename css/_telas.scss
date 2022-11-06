@@ -1,0 +1,52 @@
+@mixin telas($display) {
+    display: $display;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.565);
+    z-index: 2;
+}
+
+.tela-de-adicionar {
+    @include telas(none);
+
+    .container-de-adicionar {
+        height: 85%;
+        width: 70%;
+        background: $color03;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.tela-de-editar {
+    @include telas(none);
+
+    .container-de-editar {
+        height: 85%;
+        width: 70%;
+        background: $color03;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.tela-de-excluir {
+    @include telas(none);
+
+    .container-de-excluir {
+        width: 50%;
+        height: 40%;
+        background: $color03;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

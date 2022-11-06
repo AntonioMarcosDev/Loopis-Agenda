@@ -12,35 +12,16 @@ body {
   height: 100vh;
   width: 100vw;
   align-items: center;
-  justify-content: center;
   background: #373030;
 }
 body a,
 body button {
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1000px) {
-  .container {
-    height: 50vh;
-  }
-}
-@media only screen and (max-width: 700px) {
-  body {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .container {
-    width: 100vw;
-    margin: 30px 0px;
-    padding: 0;
-  }
-  picture {
-    width: 100vw;
-    text-align: center;
-  }
-}
-.container-de-texto {
+.container-de-texto-home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,33 +32,175 @@ body button {
   padding: 5px;
   color: #E7E7E7;
 }
-.container-de-texto .texto {
+.container-de-texto-home .texto-home {
   height: 100%;
   min-width: 275px;
   max-width: 295px;
 }
-.container-de-texto .texto h1 {
+.container-de-texto-home .texto-home h1 {
   font-size: 4rem;
   margin-bottom: 30px;
 }
-.container-de-texto .texto p {
+.container-de-texto-home .texto-home p {
   font-size: 1.5rem;
 }
-.container-de-texto button {
+.container-de-texto-home button {
   font-size: 1.5rem;
   height: 80px;
   min-width: 275px;
   width: 20vw;
   border-radius: 40px;
-  border: none;
-  outline: none;
   background: #F2C46D;
 }
-.container-de-texto button:hover {
+.container-de-texto-home button:hover {
   background: #f6d79c;
 }
 
 picture {
   width: 60vw;
   text-align: center;
+}
+
+.tela-de-adicionar {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.565);
+  z-index: 2;
+}
+.tela-de-adicionar .container-de-adicionar {
+  height: 85%;
+  width: 70%;
+  background: #C5C5C4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tela-de-editar {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.565);
+  z-index: 2;
+}
+.tela-de-editar .container-de-editar {
+  height: 85%;
+  width: 70%;
+  background: #C5C5C4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tela-de-excluir {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.565);
+  z-index: 2;
+}
+.tela-de-excluir .container-de-excluir {
+  width: 50%;
+  height: 40%;
+  background: #C5C5C4;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-de-dias {
+  background: #202148;
+  height: 100vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.container-de-dias .area-de-dias {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+.container-de-dias .area-de-dias .dias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #E7E7E7;
+  text-align: center;
+  height: 14vh;
+  width: 12vw;
+  border-radius: 20px;
+}
+.container-de-dias .area-de-dias .dias #hoje-de-dias {
+  background: #AFAEAE;
+  line-height: 30px;
+  width: 8vw;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+.container-de-dias #adicionar-de-dias {
+  background: #FEDB71;
+  height: 50px;
+  width: 50px;
+  border-radius: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+.container-de-dias #adicionar-de-dias:hover {
+  background: #fee8a4;
+}
+
+.container-de-tarefas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 85vw;
+}
+.container-de-tarefas .area-de-tarefas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 85%;
+  width: 85%;
+  background: #C5C5C4;
+  padding: 20px;
+}
+.container-de-tarefas .area-de-tarefas .titulo-de-tarefas {
+  background: #AFAEAE;
+  text-align: center;
+  width: 20vw;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+.container-de-tarefas .area-de-tarefas #adicionar-de-tarefas {
+  height: 5vh;
+  width: 20vw;
+  font-size: 1.2rem;
+  background: #FEDB71;
+  border-radius: 20px;
+  margin-bottom: 80px;
+}
+.container-de-tarefas .area-de-tarefas #adicionar-de-tarefas:hover {
+  background: #fee8a4;
 }/*# sourceMappingURL=main.css.map */
