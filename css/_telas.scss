@@ -13,27 +13,167 @@
     @include telas(none);
 
     .container-de-adicionar {
-        height: 85%;
-        width: 70%;
+        height: 75%;
+        width: 60%;
         background: $color03;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 10px;
+
+        h1 {
+            background-color: $color04;
+            margin: 20px auto;
+            text-align: center;
+            width: 20vw;
+            line-height: 10vh;
+            border-radius: 20px;
+        }
+
+        label {
+            padding-left: 10%;
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+
+        #nome-da-tarefa,
+        #tarefa {
+            width: 80%;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            margin: 5px 0px;
+            padding: 0px 15px;
+        }
+
+        #nome-da-tarefa {
+            height: 50px;
+            background: $color04;
+        }
+
+        #tarefa {
+            height: 150px;
+            font-size: 1.2rem;
+        }
+
+        #data {
+            height: 5vh;
+            width: 25vh;
+            background: $color04;
+            text-align: center;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            align-self: flex-start;
+            margin: 5px 0px 0px 10%;
+        }
+
+        #adicionar-de-adicionar {
+            background: $color07;
+            height: 5vh;
+            width: 15vw;
+            margin: auto;
+            border-radius: 30px;
+            font-size: 1.2rem;
+
+            &:hover {
+                background: lighten($color07, $amount: 10);
+            }
+        }
     }
+}
+
+.botoes {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 .tela-de-editar {
     @include telas(none);
 
     .container-de-editar {
-        height: 85%;
-        width: 70%;
+        height: 75%;
+        width: 60%;
         background: $color03;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 10px;
+
+        .texto-de-editar {
+            display: flex;
+            font-size: 1.2rem;
+            height: 100px;
+            align-items: center;
+        }
+
+        label {
+            padding-left: 10%;
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+
+        #nome-da-tarefa,
+        #tarefa {
+            width: 80%;
+            border-radius: 30px;
+            outline: none;
+            border: none;
+            margin: 5px 0px;
+            padding: 0px 15px;
+        }
+
+        #nome-da-tarefa {
+            height: 50px;
+            background: $color04;
+        }
+
+        #tarefa {
+            height: 150px;
+            font-size: 1.2rem;
+        }
+
+        #data {
+            height: 5vh;
+            width: 25vh;
+            background: $color04;
+            text-align: center;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            align-self: flex-start;
+            margin: 5px 0px 0px 10%;
+        }
+
+        #cancelar-de-editar,
+        #salvar-de-editar {
+            height: 5vh;
+            width: 15vw;
+            border-radius: 30px;
+            font-size: 1.2rem;
+        }
+
+        #cancelar-de-editar {
+            background: $color04;
+
+            &:hover {
+                background: lighten($color04, $amount: 5);
+            }
+        }
+
+        #salvar-de-editar {
+            background: $color07;
+
+            &:hover {
+                background: lighten($color07, $amount: 10);
+            }
+        }
     }
 }
 
@@ -41,12 +181,36 @@
     @include telas(none);
 
     .container-de-excluir {
-        width: 50%;
-        height: 40%;
+        width: 30%;
+        height: 20%;
         background: $color03;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 10px;
+
+        #cancelar-de-excluir,
+        #excluir-de-excluir {
+            height: 5vh;
+            width: 6vw;
+            font-size: 1.2rem;
+        }
+
+        #cancelar-de-excluir {
+            background: $color04;
+
+            &:hover {
+                background: lighten($color04, $amount: 5);
+            }
+        }
+
+        #excluir-de-excluir {
+            background: $color08;
+
+            &:hover {
+                background: lighten($color08, $amount: 10);
+            }
+        }
     }
 }

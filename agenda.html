@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <div class="container-de-dias">
+    <!--Dias-->
+    <section class="container-de-dias">
         <div class="area-de-dias">
             <button class="dias">
                 <h1></h1>
@@ -21,8 +22,9 @@
 
         </div>
         <button id="adicionar-de-dias">+</button>
-    </div>
-    <div class="container-de-tarefas">
+    </section>
+    <!--Tarefas-->
+    <section class="container-de-tarefas">
         <div class="area-de-tarefas">
             <div class="titulo-de-tarefas">
                 <h1>Atividades do dia:</h1>
@@ -32,8 +34,9 @@
             </div>
             <button id="adicionar-de-tarefas">Insira um nova atividade do dia</button>
         </div>
-    </div>
-    <div class="tela-de-adicionar">
+    </section>
+    <!--Tela de adicionar tarefas-->
+    <section class="tela-de-adicionar">
         <div class="container-de-adicionar">
             <h1>Nova Atividade</h1>
             <label for="nome-da-tarefa">Nome:</label>
@@ -44,11 +47,12 @@
             <input type="date" name="" id="data">
             <button id="adicionar-de-adicionar">Adicionar</button>
         </div>
-    </div>
-    <div class="tela-de-editar">
+    </section>
+    <!--Tela de editar tarefas-->
+    <section class="tela-de-editar">
         <div class="container-de-editar">
             <div class="texto-de-editar">
-                <h1>Atividade:</h1>
+                <p>Atividade:</p>
                 <p></p>
             </div>
             <label for="nome-da-tarefa">Nome:</label>
@@ -57,16 +61,25 @@
             <input type="text" id="tarefa" placeholder="Escreva a descrição">
             <label for="data">Data:</label>
             <input type="date" name="" id="data">
-            <button id="cancelar-de-editar">Cancelar</button>
-            <button id="salvar-de-editar">Salvar</button>
+            <div class="botoes">
+                <button id="cancelar-de-editar">Cancelar</button>
+                <button id="salvar-de-editar">Salvar</button>
+            </div>
         </div>
-    </div>
-    <div class="tela-de-excluir">
-        <p>Deseja excluir a seguinte atividade:</p>
-        <p id="atividade"></p>
-        <button id="cancelar-de-excluir">Cancelar</button>
-        <button id="eexcluir-de-exclir">Excluir</button>
-    </div>
+    </section>
+    <!--Tela de Excluir tarefas-->
+    <section class="tela-de-excluir">
+        <div class="container-de-excluir">
+            <div class="texto-de-excluir">
+                <p>Deseja excluir a seguinte atividade:</p>
+                <p id="atividade"></p>
+            </div>
+            <div class="botoes">
+                <button id="cancelar-de-excluir">Cancelar</button>
+                <button id="excluir-de-excluir">Excluir</button>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

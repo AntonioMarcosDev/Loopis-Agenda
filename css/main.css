@@ -72,13 +72,74 @@ picture {
   z-index: 2;
 }
 .tela-de-adicionar .container-de-adicionar {
-  height: 85%;
-  width: 70%;
+  height: 75%;
+  width: 60%;
   background: #C5C5C4;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+}
+.tela-de-adicionar .container-de-adicionar h1 {
+  background-color: #AFAEAE;
+  margin: 20px auto;
+  text-align: center;
+  width: 20vw;
+  line-height: 10vh;
+  border-radius: 20px;
+}
+.tela-de-adicionar .container-de-adicionar label {
+  padding-left: 10%;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+.tela-de-adicionar .container-de-adicionar #nome-da-tarefa,
+.tela-de-adicionar .container-de-adicionar #tarefa {
+  width: 80%;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  margin: 5px 0px;
+  padding: 0px 15px;
+}
+.tela-de-adicionar .container-de-adicionar #nome-da-tarefa {
+  height: 50px;
+  background: #AFAEAE;
+}
+.tela-de-adicionar .container-de-adicionar #tarefa {
+  height: 150px;
+  font-size: 1.2rem;
+}
+.tela-de-adicionar .container-de-adicionar #data {
+  height: 5vh;
+  width: 25vh;
+  background: #AFAEAE;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  align-self: flex-start;
+  margin: 5px 0px 0px 10%;
+}
+.tela-de-adicionar .container-de-adicionar #adicionar-de-adicionar {
+  background: #4EBF6B;
+  height: 5vh;
+  width: 15vw;
+  margin: auto;
+  border-radius: 30px;
+  font-size: 1.2rem;
+}
+.tela-de-adicionar .container-de-adicionar #adicionar-de-adicionar:hover {
+  background: #73cd8a;
+}
+
+.botoes {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  margin: auto;
 }
 
 .tela-de-editar {
@@ -92,13 +153,73 @@ picture {
   z-index: 2;
 }
 .tela-de-editar .container-de-editar {
-  height: 85%;
-  width: 70%;
+  height: 75%;
+  width: 60%;
   background: #C5C5C4;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+}
+.tela-de-editar .container-de-editar .texto-de-editar {
+  display: flex;
+  font-size: 1.2rem;
+  height: 100px;
+  align-items: center;
+}
+.tela-de-editar .container-de-editar label {
+  padding-left: 10%;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+.tela-de-editar .container-de-editar #nome-da-tarefa,
+.tela-de-editar .container-de-editar #tarefa {
+  width: 80%;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  margin: 5px 0px;
+  padding: 0px 15px;
+}
+.tela-de-editar .container-de-editar #nome-da-tarefa {
+  height: 50px;
+  background: #AFAEAE;
+}
+.tela-de-editar .container-de-editar #tarefa {
+  height: 150px;
+  font-size: 1.2rem;
+}
+.tela-de-editar .container-de-editar #data {
+  height: 5vh;
+  width: 25vh;
+  background: #AFAEAE;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  align-self: flex-start;
+  margin: 5px 0px 0px 10%;
+}
+.tela-de-editar .container-de-editar #cancelar-de-editar,
+.tela-de-editar .container-de-editar #salvar-de-editar {
+  height: 5vh;
+  width: 15vw;
+  border-radius: 30px;
+  font-size: 1.2rem;
+}
+.tela-de-editar .container-de-editar #cancelar-de-editar {
+  background: #AFAEAE;
+}
+.tela-de-editar .container-de-editar #cancelar-de-editar:hover {
+  background: #bcbbbb;
+}
+.tela-de-editar .container-de-editar #salvar-de-editar {
+  background: #4EBF6B;
+}
+.tela-de-editar .container-de-editar #salvar-de-editar:hover {
+  background: #73cd8a;
 }
 
 .tela-de-excluir {
@@ -112,13 +233,32 @@ picture {
   z-index: 2;
 }
 .tela-de-excluir .container-de-excluir {
-  width: 50%;
-  height: 40%;
+  width: 30%;
+  height: 20%;
   background: #C5C5C4;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+}
+.tela-de-excluir .container-de-excluir #cancelar-de-excluir,
+.tela-de-excluir .container-de-excluir #excluir-de-excluir {
+  height: 5vh;
+  width: 6vw;
+  font-size: 1.2rem;
+}
+.tela-de-excluir .container-de-excluir #cancelar-de-excluir {
+  background: #AFAEAE;
+}
+.tela-de-excluir .container-de-excluir #cancelar-de-excluir:hover {
+  background: #bcbbbb;
+}
+.tela-de-excluir .container-de-excluir #excluir-de-excluir {
+  background: #F26363;
+}
+.tela-de-excluir .container-de-excluir #excluir-de-excluir:hover {
+  background: #f69292;
 }
 
 .container-de-dias {
@@ -146,7 +286,7 @@ picture {
   justify-content: center;
   background: #E7E7E7;
   text-align: center;
-  height: 14vh;
+  height: 15vh;
   width: 12vw;
   border-radius: 20px;
 }
