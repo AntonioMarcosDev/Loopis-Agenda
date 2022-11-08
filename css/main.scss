@@ -31,7 +31,7 @@ $color09: #202148;
         align-items: center;
         overflow-y: auto;
 
-        .dias {
+        .dia {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -41,13 +41,15 @@ $color09: #202148;
             height: 15vh;
             width: 12vw;
             border-radius: 20px;
+            font-size: 1.2rem;
 
-            #hoje-de-dias {
+            #hoje {
                 background: $color04;
                 line-height: 30px;
                 width: 8vw;
-                margin-top: 30px;
+                margin-top: 10px;
                 border-radius: 20px;
+                font-size: 1rem;
             }
         }
     }
@@ -78,17 +80,84 @@ $color09: #202148;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        height: 85%;
-        width: 85%;
+        height: 95%;
+        width: 95%;
         background: $color03;
         padding: 20px;
 
         .titulo-de-tarefas {
+            display: flex;
+            flex-direction: column;
             background: $color04;
-            text-align: center;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
             width: 20vw;
             border-radius: 20px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+        }
+
+        .tarefas {
+            height: 60%;
+            width: 85%;
+
+            .task {
+                background: $color04;
+                position: relative;
+                height: 100px;
+                width: 100%;
+                border-radius: 30px;
+                display: flex;
+                align-items: center;
+                font-size: 1.2rem;
+                padding: 10px;
+                margin-bottom: 20px;
+
+                h1 {
+                    text-align: justify;
+                    line-height: 80px;
+                    width: 20%;
+                    padding-left: 20px;
+
+                    &::after {
+                        content: ":";
+                    }
+                }
+
+                p {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $color03;
+                    height: 80px;
+                    width: 65%;
+                    text-align: center;
+                    border-radius: 30px;
+                    padding: 5px;
+                    overflow-y: auto;
+                }
+
+                #editor,
+                #removedor {
+                    background-color: transparent;
+                    height: 50px;
+                    width: 50px;
+                    margin: auto;
+                }
+
+                #editor {
+                    background-image: url(../img/icons8-lápis-30.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                #removedor {
+                    background-image: url(../img/icons8-lixo-30.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
         }
 
         #adicionar-de-tarefas {

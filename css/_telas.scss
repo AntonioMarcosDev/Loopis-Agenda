@@ -190,6 +190,15 @@
         align-items: center;
         padding: 10px;
 
+        .texto-de-excluir{
+            font-size: 1.2rem;
+            text-align: center;
+
+            #atividade{
+                font-weight: bolder;
+            }
+        }
+
         #cancelar-de-excluir,
         #excluir-de-excluir {
             height: 5vh;

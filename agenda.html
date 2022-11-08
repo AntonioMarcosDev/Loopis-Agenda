@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rufina&display=swap">
     <link rel="stylesheet" href="css/main.css">
+    <script src="index.js" defer></script>
     <title>Loopis Agenda</title>
 </head>
 
@@ -14,10 +15,10 @@
     <!--Dias-->
     <section class="container-de-dias">
         <div class="area-de-dias">
-            <button class="dias">
-                <h1></h1>
-                <p></p>
-                <p id="hoje-de-dias">Hoje</p>
+            <button class="dia">
+                <h1 id="data-de-dias"></h1>
+                <p id="ano-de-dias"></p>
+                <p id="hoje">Hoje</p>
             </button>
 
         </div>
@@ -28,7 +29,7 @@
         <div class="area-de-tarefas">
             <div class="titulo-de-tarefas">
                 <h1>Atividades do dia:</h1>
-                <p class="hoje-de-tarefas"></p>
+                <p id="hoje-de-tarefas"></p>
             </div>
             <div class="tarefas">
             </div>
@@ -44,7 +45,7 @@
             <label for="tarefa">Descrição:</label>
             <input type="text" id="tarefa" placeholder="Escreva a descrição">
             <label for="data">Data:</label>
-            <input type="date" name="" id="data">
+            <input type="date" name="" id="data" value="">
             <button id="adicionar-de-adicionar">Adicionar</button>
         </div>
     </section>
