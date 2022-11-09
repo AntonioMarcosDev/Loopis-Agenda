@@ -91,6 +91,7 @@ $color09: #202148;
             background: $color04;
             align-items: center;
             justify-content: center;
+            text-align: center;
             height: 150px;
             width: 20vw;
             border-radius: 20px;
@@ -138,21 +139,21 @@ $color09: #202148;
                     overflow-y: auto;
                 }
 
-                #editor,
-                #removedor {
+                .editor,
+                .removedor {
                     background-color: transparent;
                     height: 50px;
                     width: 50px;
                     margin: auto;
                 }
 
-                #editor {
+                .editor {
                     background-image: url(../img/icons8-lápis-30.png);
                     background-size: cover;
                     background-position: center;
                 }
 
-                #removedor {
+                .removedor {
                     background-image: url(../img/icons8-lixo-30.png);
                     background-size: cover;
                     background-position: center;

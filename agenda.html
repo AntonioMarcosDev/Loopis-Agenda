@@ -37,43 +37,43 @@
         </div>
     </section>
     <!--Tela de adicionar tarefas-->
-    <section class="tela-de-adicionar">
-        <div class="container-de-adicionar">
+    <section id="tela-de-adicionar">
+        <form id="form-de-adicionar" autocomplete="off">
             <h1>Nova Atividade</h1>
             <label for="nome-da-tarefa">Nome:</label>
-            <input type="text" id="nome-da-tarefa" placeholder="Escreva a atividade">
+            <input type="text" id="nome-da-tarefa" placeholder="Escreva a atividade" required>
             <label for="tarefa">Descrição:</label>
-            <input type="text" id="tarefa" placeholder="Escreva a descrição">
+            <input type="text" id="tarefa" placeholder="Escreva a descrição" required>
             <label for="data">Data:</label>
-            <input type="date" name="" id="data" value="">
+            <input type="date" name="" id="data" required>
             <button id="adicionar-de-adicionar">Adicionar</button>
-        </div>
+        </form>
     </section>
     <!--Tela de editar tarefas-->
-    <section class="tela-de-editar">
-        <div class="container-de-editar">
+    <section id="tela-de-editar">
+        <form id="form-de-editar" autocomplete="off">
             <div class="texto-de-editar">
-                <p>Atividade:</p>
-                <p></p>
+                <p>Atividade: </p>
+                <p id="atividade-de-editar"></p>
             </div>
-            <label for="nome-da-tarefa">Nome:</label>
-            <input type="text" id="nome-da-tarefa" placeholder="Escreva a atividade">
-            <label for="tarefa">Descrição:</label>
-            <input type="text" id="tarefa" placeholder="Escreva a descrição">
-            <label for="data">Data:</label>
-            <input type="date" name="" id="data">
+            <label for="nome-da-tarefa-editar">Nome:</label>
+            <input type="text" id="nome-da-tarefa-editar" placeholder="Escreva a atividade" required>
+            <label for="tarefa-editar">Descrição:</label>
+            <input type="text" id="tarefa-editar" placeholder="Escreva a descrição" required>
+            <label for="data-editar">Data:</label>
+            <input type="date" name="" id="data-editar" required>
             <div class="botoes">
                 <button id="cancelar-de-editar">Cancelar</button>
                 <button id="salvar-de-editar">Salvar</button>
             </div>
-        </div>
+        </form>
     </section>
     <!--Tela de Excluir tarefas-->
-    <section class="tela-de-excluir">
-        <div class="container-de-excluir">
+    <section id="tela-de-excluir">
+        <div id="container-de-excluir">
             <div class="texto-de-excluir">
                 <p>Deseja excluir a seguinte atividade:</p>
-                <p id="atividade"></p>
+                <p id="atividade-de-excluir"></p>
             </div>
             <div class="botoes">
                 <button id="cancelar-de-excluir">Cancelar</button>

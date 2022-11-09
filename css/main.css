@@ -61,7 +61,7 @@ picture {
   text-align: center;
 }
 
-.tela-de-adicionar {
+#tela-de-adicionar {
   display: none;
   position: absolute;
   align-items: center;
@@ -71,7 +71,7 @@ picture {
   background: rgba(0, 0, 0, 0.565);
   z-index: 2;
 }
-.tela-de-adicionar .container-de-adicionar {
+#tela-de-adicionar #form-de-adicionar {
   height: 75%;
   width: 60%;
   background: #C5C5C4;
@@ -81,7 +81,7 @@ picture {
   align-items: center;
   padding: 10px;
 }
-.tela-de-adicionar .container-de-adicionar h1 {
+#tela-de-adicionar #form-de-adicionar h1 {
   background-color: #AFAEAE;
   margin: 20px auto;
   text-align: center;
@@ -89,13 +89,13 @@ picture {
   line-height: 10vh;
   border-radius: 20px;
 }
-.tela-de-adicionar .container-de-adicionar label {
+#tela-de-adicionar #form-de-adicionar label {
   padding-left: 10%;
   margin-top: 10px;
   align-self: flex-start;
 }
-.tela-de-adicionar .container-de-adicionar #nome-da-tarefa,
-.tela-de-adicionar .container-de-adicionar #tarefa {
+#tela-de-adicionar #form-de-adicionar #nome-da-tarefa,
+#tela-de-adicionar #form-de-adicionar #tarefa {
   width: 80%;
   border-radius: 30px;
   outline: none;
@@ -103,15 +103,15 @@ picture {
   margin: 5px 0px;
   padding: 0px 15px;
 }
-.tela-de-adicionar .container-de-adicionar #nome-da-tarefa {
+#tela-de-adicionar #form-de-adicionar #nome-da-tarefa {
   height: 50px;
   background: #AFAEAE;
 }
-.tela-de-adicionar .container-de-adicionar #tarefa {
+#tela-de-adicionar #form-de-adicionar #tarefa {
   height: 150px;
   font-size: 1.2rem;
 }
-.tela-de-adicionar .container-de-adicionar #data {
+#tela-de-adicionar #form-de-adicionar #data {
   height: 5vh;
   width: 25vh;
   background: #AFAEAE;
@@ -123,7 +123,7 @@ picture {
   align-self: flex-start;
   margin: 5px 0px 0px 10%;
 }
-.tela-de-adicionar .container-de-adicionar #adicionar-de-adicionar {
+#tela-de-adicionar #form-de-adicionar #adicionar-de-adicionar {
   background: #4EBF6B;
   height: 5vh;
   width: 15vw;
@@ -131,7 +131,7 @@ picture {
   border-radius: 30px;
   font-size: 1.2rem;
 }
-.tela-de-adicionar .container-de-adicionar #adicionar-de-adicionar:hover {
+#tela-de-adicionar #form-de-adicionar #adicionar-de-adicionar:hover {
   background: #73cd8a;
 }
 
@@ -142,7 +142,7 @@ picture {
   margin: auto;
 }
 
-.tela-de-editar {
+#tela-de-editar {
   display: none;
   position: absolute;
   align-items: center;
@@ -152,7 +152,7 @@ picture {
   background: rgba(0, 0, 0, 0.565);
   z-index: 2;
 }
-.tela-de-editar .container-de-editar {
+#tela-de-editar #form-de-editar {
   height: 75%;
   width: 60%;
   background: #C5C5C4;
@@ -162,19 +162,19 @@ picture {
   align-items: center;
   padding: 10px;
 }
-.tela-de-editar .container-de-editar .texto-de-editar {
+#tela-de-editar #form-de-editar .texto-de-editar {
   display: flex;
   font-size: 1.2rem;
   height: 100px;
   align-items: center;
 }
-.tela-de-editar .container-de-editar label {
+#tela-de-editar #form-de-editar label {
   padding-left: 10%;
   margin-top: 10px;
   align-self: flex-start;
 }
-.tela-de-editar .container-de-editar #nome-da-tarefa,
-.tela-de-editar .container-de-editar #tarefa {
+#tela-de-editar #form-de-editar #nome-da-tarefa-editar,
+#tela-de-editar #form-de-editar #tarefa-editar {
   width: 80%;
   border-radius: 30px;
   outline: none;
@@ -182,15 +182,15 @@ picture {
   margin: 5px 0px;
   padding: 0px 15px;
 }
-.tela-de-editar .container-de-editar #nome-da-tarefa {
+#tela-de-editar #form-de-editar #nome-da-tarefa-editar {
   height: 50px;
   background: #AFAEAE;
 }
-.tela-de-editar .container-de-editar #tarefa {
+#tela-de-editar #form-de-editar #tarefa-editar {
   height: 150px;
   font-size: 1.2rem;
 }
-.tela-de-editar .container-de-editar #data {
+#tela-de-editar #form-de-editar #data-editar {
   height: 5vh;
   width: 25vh;
   background: #AFAEAE;
@@ -202,27 +202,27 @@ picture {
   align-self: flex-start;
   margin: 5px 0px 0px 10%;
 }
-.tela-de-editar .container-de-editar #cancelar-de-editar,
-.tela-de-editar .container-de-editar #salvar-de-editar {
+#tela-de-editar #form-de-editar #cancelar-de-editar,
+#tela-de-editar #form-de-editar #salvar-de-editar {
   height: 5vh;
   width: 15vw;
   border-radius: 30px;
   font-size: 1.2rem;
 }
-.tela-de-editar .container-de-editar #cancelar-de-editar {
+#tela-de-editar #form-de-editar #cancelar-de-editar {
   background: #AFAEAE;
 }
-.tela-de-editar .container-de-editar #cancelar-de-editar:hover {
+#tela-de-editar #form-de-editar #cancelar-de-editar:hover {
   background: #bcbbbb;
 }
-.tela-de-editar .container-de-editar #salvar-de-editar {
+#tela-de-editar #form-de-editar #salvar-de-editar {
   background: #4EBF6B;
 }
-.tela-de-editar .container-de-editar #salvar-de-editar:hover {
+#tela-de-editar #form-de-editar #salvar-de-editar:hover {
   background: #73cd8a;
 }
 
-.tela-de-excluir {
+#tela-de-excluir {
   display: none;
   position: absolute;
   align-items: center;
@@ -232,7 +232,7 @@ picture {
   background: rgba(0, 0, 0, 0.565);
   z-index: 2;
 }
-.tela-de-excluir .container-de-excluir {
+#tela-de-excluir #container-de-excluir {
   width: 30%;
   height: 20%;
   background: #C5C5C4;
@@ -242,29 +242,29 @@ picture {
   align-items: center;
   padding: 10px;
 }
-.tela-de-excluir .container-de-excluir .texto-de-excluir {
+#tela-de-excluir #container-de-excluir .texto-de-excluir {
   font-size: 1.2rem;
   text-align: center;
 }
-.tela-de-excluir .container-de-excluir .texto-de-excluir #atividade {
+#tela-de-excluir #container-de-excluir .texto-de-excluir #atividade {
   font-weight: bolder;
 }
-.tela-de-excluir .container-de-excluir #cancelar-de-excluir,
-.tela-de-excluir .container-de-excluir #excluir-de-excluir {
+#tela-de-excluir #container-de-excluir #cancelar-de-excluir,
+#tela-de-excluir #container-de-excluir #excluir-de-excluir {
   height: 5vh;
   width: 6vw;
   font-size: 1.2rem;
 }
-.tela-de-excluir .container-de-excluir #cancelar-de-excluir {
+#tela-de-excluir #container-de-excluir #cancelar-de-excluir {
   background: #AFAEAE;
 }
-.tela-de-excluir .container-de-excluir #cancelar-de-excluir:hover {
+#tela-de-excluir #container-de-excluir #cancelar-de-excluir:hover {
   background: #bcbbbb;
 }
-.tela-de-excluir .container-de-excluir #excluir-de-excluir {
+#tela-de-excluir #container-de-excluir #excluir-de-excluir {
   background: #F26363;
 }
-.tela-de-excluir .container-de-excluir #excluir-de-excluir:hover {
+#tela-de-excluir #container-de-excluir #excluir-de-excluir:hover {
   background: #f69292;
 }
 
@@ -341,6 +341,7 @@ picture {
   background: #AFAEAE;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: 150px;
   width: 20vw;
   border-radius: 20px;
@@ -384,19 +385,19 @@ picture {
   padding: 5px;
   overflow-y: auto;
 }
-.container-de-tarefas .area-de-tarefas .tarefas .task #editor,
-.container-de-tarefas .area-de-tarefas .tarefas .task #removedor {
+.container-de-tarefas .area-de-tarefas .tarefas .task .editor,
+.container-de-tarefas .area-de-tarefas .tarefas .task .removedor {
   background-color: transparent;
   height: 50px;
   width: 50px;
   margin: auto;
 }
-.container-de-tarefas .area-de-tarefas .tarefas .task #editor {
+.container-de-tarefas .area-de-tarefas .tarefas .task .editor {
   background-image: url(../img/icons8-lápis-30.png);
   background-size: cover;
   background-position: center;
 }
-.container-de-tarefas .area-de-tarefas .tarefas .task #removedor {
+.container-de-tarefas .area-de-tarefas .tarefas .task .removedor {
   background-image: url(../img/icons8-lixo-30.png);
   background-size: cover;
   background-position: center;

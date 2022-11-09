@@ -9,10 +9,10 @@
     z-index: 2;
 }
 
-.tela-de-adicionar {
+#tela-de-adicionar {
     @include telas(none);
 
-    .container-de-adicionar {
+    #form-de-adicionar {
         height: 75%;
         width: 60%;
         background: $color03;
@@ -92,10 +92,10 @@
     margin: auto;
 }
 
-.tela-de-editar {
+#tela-de-editar {
     @include telas(none);
 
-    .container-de-editar {
+    #form-de-editar {
         height: 75%;
         width: 60%;
         background: $color03;
@@ -118,8 +118,8 @@
             align-self: flex-start;
         }
 
-        #nome-da-tarefa,
-        #tarefa {
+        #nome-da-tarefa-editar,
+        #tarefa-editar {
             width: 80%;
             border-radius: 30px;
             outline: none;
@@ -128,17 +128,17 @@
             padding: 0px 15px;
         }
 
-        #nome-da-tarefa {
+        #nome-da-tarefa-editar {
             height: 50px;
             background: $color04;
         }
 
-        #tarefa {
+        #tarefa-editar {
             height: 150px;
             font-size: 1.2rem;
         }
 
-        #data {
+        #data-editar {
             height: 5vh;
             width: 25vh;
             background: $color04;
@@ -177,10 +177,10 @@
     }
 }
 
-.tela-de-excluir {
+#tela-de-excluir {
     @include telas(none);
 
-    .container-de-excluir {
+    #container-de-excluir {
         width: 30%;
         height: 20%;
         background: $color03;
@@ -190,11 +190,11 @@
         align-items: center;
         padding: 10px;
 
-        .texto-de-excluir{
+        .texto-de-excluir {
             font-size: 1.2rem;
             text-align: center;
 
-            #atividade{
+            #atividade {
                 font-weight: bolder;
             }
         }
