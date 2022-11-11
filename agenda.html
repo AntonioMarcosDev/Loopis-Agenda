@@ -16,9 +16,9 @@
     <section class="container-de-dias">
         <div class="area-de-dias">
             <button class="dia">
-                <h1 id="data-de-dias"></h1>
-                <p id="ano-de-dias"></p>
-                <p id="hoje">Hoje</p>
+                <h1 class="data-de-dias"></h1>
+                <p class="ano-de-dias"></p>
+                <p class="hoje">Hoje</p>
             </button>
 
         </div>
@@ -45,13 +45,13 @@
             <label for="tarefa">Descrição:</label>
             <input type="text" id="tarefa" placeholder="Escreva a descrição" required>
             <label for="data">Data:</label>
-            <input type="date" name="" id="data" required>
+            <input type="date" id="data" required>
             <button id="adicionar-de-adicionar">Adicionar</button>
         </form>
     </section>
     <!--Tela de editar tarefas-->
     <section id="tela-de-editar">
-        <form id="form-de-editar" autocomplete="off">
+        <div id="form-de-editar" autocomplete="off">
             <div class="texto-de-editar">
                 <p>Atividade: </p>
                 <p id="atividade-de-editar"></p>
@@ -61,12 +61,12 @@
             <label for="tarefa-editar">Descrição:</label>
             <input type="text" id="tarefa-editar" placeholder="Escreva a descrição" required>
             <label for="data-editar">Data:</label>
-            <input type="date" name="" id="data-editar" required>
+            <input type="date" id="data-editar" required>
             <div class="botoes">
                 <button id="cancelar-de-editar">Cancelar</button>
                 <button id="salvar-de-editar">Salvar</button>
             </div>
-        </form>
+        </div>
     </section>
     <!--Tela de Excluir tarefas-->
     <section id="tela-de-excluir">
