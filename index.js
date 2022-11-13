@@ -189,7 +189,7 @@ addInTaskBtn.addEventListener("click", () => {
     windowAdd.style.display = "flex";
     inputAddName.value = "";
     inputAddTask.value = "";
-    inputAddDate.valueAsDate = new Date(Date.UTC(preDate.getFullYear(), preDate.getMonth(), preDate.getDate()));
+    inputAddDate.valueAsDate = new Date(Date.UTC(Number(areaHoje.innerHTML.slice(6, 10)), (Number(areaHoje.innerHTML.slice(3, 5)) - 1), Number(areaHoje.innerHTML.slice(0, 2))))
 });
 
 formAdd.addEventListener("submit", (event) => {
