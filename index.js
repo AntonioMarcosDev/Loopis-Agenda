@@ -5,12 +5,11 @@ const day = localeDate.slice(0, 2);
 const month = localeDate.slice(3, 5);
 const year = localeDate.slice(6, 10);
 
-document.querySelector(".data-de-dias").innerHTML = `${day}/${month}`;
-document.querySelector(".ano-de-dias").innerHTML = year;
-document.querySelector("#hoje-de-tarefas").innerHTML = localeDate;
+let areaHoje = document.querySelector("#hoje-de-tarefas");
+areaHoje.innerHTML = localeDate;
 
 let listaTarefas = [];
-let listaDias = [localeDate];
+let listaDias = [];
 
 //Janelas
 const windowAdd = document.querySelector("#tela-de-adicionar");
@@ -49,6 +48,8 @@ function removerListaTarefas(event) {
     let index = event.target.getAttribute('ordem-tarefa');
     listaTarefas.splice(index, 1);
     atualizarListaTarefas();
+    removerDiasVazios();
+    atualizarDias()
     windowRemove.style.display = "none";
 }
 
@@ -57,6 +58,8 @@ function editarListaTarefas(event) {
     listaTarefas[index].nome = inputEditName.value;
     listaTarefas[index].detalhes = inputEditTask.value;
     atualizarListaTarefas();
+    removerDiasVazios();
+    atualizarDias();
     windowEdit.style.display = "none";
 }
 
@@ -78,7 +81,6 @@ function janelaEditar(event) {
     inputEditName.value = listaTarefas[index].nome;
     inputEditTask.value = listaTarefas[index].detalhes;
     inputEditDate.valueAsDate = new Date(Date.UTC(Number(listaTarefas[index].data.slice(6, 10)), Number(listaTarefas[index].data.slice(3, 5)), Number(listaTarefas[index].data.slice(0, 2))))
-    console.log(index);
     windowEdit.style.display = "flex";
     btnWindowEditCancel.addEventListener("click", () => {
         windowEdit.style.display = "none";
@@ -88,35 +90,56 @@ function janelaEditar(event) {
     btnWindowEditSave.addEventListener("click", editarListaTarefas)
 }
 
+function removerDiasVazios() {
+    let datasDasTarefas = Array.from(new Set(listaTarefas.map(c => c.data)));
+    listaDias = datasDasTarefas;
+}
+
 function atualizarListaTarefas() {
     areaTasks.innerHTML = "";
     for (let i = 0; i < listaTarefas.length; i++) {
-        const tarefa = listaTarefas[i];
-        const task = document.createElement("div");
-        task.classList.add("task");
-        const title = document.createElement("h1");
-        title.innerText = tarefa.nome;
-        const description = document.createElement("p");
-        description.innerText = tarefa.detalhes;
-        const buttonEdit = document.createElement("button");
-        buttonEdit.classList.add("editor");
-        buttonEdit.setAttribute('ordem-tarefa', i);
-        buttonEdit.addEventListener("click", janelaEditar);
-        const buttonRemove = document.createElement("button");
-        buttonRemove.classList.add("removedor");
-        buttonRemove.setAttribute('ordem-tarefa', i);
-        buttonRemove.addEventListener("click", janelaRemover);
-        task.appendChild(title);
-        task.appendChild(description);
-        task.appendChild(buttonEdit);
-        task.appendChild(buttonRemove);
-        areaTasks.appendChild(task);
+        if (listaTarefas[i].data == areaHoje.innerHTML) {
+            const tarefa = listaTarefas[i];
+            const task = document.createElement("div");
+            task.classList.add("task");
+            const title = document.createElement("h1");
+            title.innerText = tarefa.nome;
+            const description = document.createElement("p");
+            description.innerText = tarefa.detalhes;
+            const buttonEdit = document.createElement("button");
+            buttonEdit.classList.add("editor");
+            buttonEdit.setAttribute('ordem-tarefa', i);
+            buttonEdit.addEventListener("click", janelaEditar);
+            const buttonRemove = document.createElement("button");
+            buttonRemove.classList.add("removedor");
+            buttonRemove.setAttribute('ordem-tarefa', i);
+            buttonRemove.addEventListener("click", janelaRemover);
+            task.appendChild(title);
+            task.appendChild(description);
+            task.appendChild(buttonEdit);
+            task.appendChild(buttonRemove);
+            areaTasks.appendChild(task);
+        }
         localStorage.setItem("tarefas", JSON.stringify(listaTarefas));
     }
+
 }
 
 function atualizarDias() {
     areaDays.innerHTML = "";
+    listaDias = Array.from(new Set(listaDias));
+    listaDias.sort(function (a, b) {
+        let [a_dia, a_mes, a_ano] = a.split('/');
+        let [b_dia, b_mes, b_ano] = b.split('/');
+        let cmp = a_ano - b_ano;
+        if (cmp === 0) {
+            cmp = a_mes - b_mes;
+            if (cmp === 0) {
+                cmp = a_dia - b_dia;
+            }
+        }
+        return cmp;
+    });
     for (let i = 0; i < listaDias.length; i++) {
         const dia = listaDias[i];
         const day = document.createElement("button");
@@ -129,11 +152,23 @@ function atualizarDias() {
         year.innerHTML = dia.slice(6, 10);
         const hojeAux = document.createElement("p");
         hojeAux.classList.add("hoje");
-        hojeAux.innerHTML = " - ";
+        (listaDias[i] == localeDate) ? hojeAux.innerHTML = "Hoje" : hojeAux.innerHTML = " - ";
+        day.setAttribute('data-dia', i);
+        day.addEventListener("click", () => {
+            areaHoje.innerHTML = listaDias[i];
+            atualizarListaTarefas();
+        })
         day.appendChild(title);
         day.appendChild(year);
         day.appendChild(hojeAux);
         areaDays.appendChild(day);
+        localStorage.setItem("dias", JSON.stringify(listaDias));
+    }
+}
+
+function inserirPrimeiroDia() {
+    if (!listaDias.length) {
+        listaDias.push(localeDate);
         localStorage.setItem("dias", JSON.stringify(listaDias));
     }
 }
@@ -162,31 +197,44 @@ addInTaskBtn.addEventListener("click", () => {
 formAdd.addEventListener("submit", (event) => {
     event.preventDefault();
     if (inputAddDate.value.split("-").reverse().join("/") === localeDate) {
-        let tarefas = localStorage.getItem("tarefas");
         listaTarefas.push({
             nome: inputAddName.value,
             detalhes: inputAddTask.value,
             data: inputAddDate.value.split("-").reverse().join("/"),
         })
+        atualizarDias();
         atualizarListaTarefas();
     } else {
         listaDias.push(inputAddDate.value.split("-").reverse().join("/"));
+        listaTarefas.push({
+            nome: inputAddName.value,
+            detalhes: inputAddTask.value,
+            data: inputAddDate.value.split("-").reverse().join("/"),
+        })
         atualizarDias();
+        atualizarListaTarefas();
     }
     windowAdd.style.display = "none";
 });
 
 window.addEventListener("load", () => {
-    let tarefas = localStorage.getItem("tarefas");
-    let tarefasObject = JSON.parse(tarefas);
-    for (let i = 0; i < tarefasObject.length; i++) {
-        listaTarefas.push(tarefasObject[i]);
+    if (localStorage.getItem("tarefas")) {
+        let tarefas = localStorage.getItem("tarefas");
+        let tarefasObject = JSON.parse(tarefas);
+        for (let i = 0; i < tarefasObject.length; i++) {
+            listaTarefas.push(tarefasObject[i]);
+        }
+        atualizarListaTarefas();
     }
-    atualizarListaTarefas();
-    let dias = localStorage.getItem("dias");
-    let diasObject = JSON.parse(dias);
-    for (let i = 1; i < diasObject.length; i++) {
-        listaDias.push(diasObject[i]);
+    if (!localStorage.getItem("dias")) {
+        inserirPrimeiroDia();
+        atualizarDias();
+    } else {
+        let dias = localStorage.getItem("dias");
+        let diasObject = JSON.parse(dias);
+        for (let i = 0; i < diasObject.length; i++) {
+            listaDias.push(diasObject[i]);
+        }
+        atualizarDias();
     }
-    atualizarDias();
 })
