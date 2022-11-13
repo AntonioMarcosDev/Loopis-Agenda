@@ -1,5 +1,3 @@
-# Ignorar a Pasta das Imagens img
-img
 # Ignorar arquivos de configuração de SASS
 .sass-cache/
 *.css.map
