@@ -1,5 +1,4 @@
 //Datas
-const preDate = new Date();
 const localeDate = new Date().toLocaleString().slice(0, 10);
 const day = localeDate.slice(0, 2);
 const month = localeDate.slice(3, 5);
@@ -24,7 +23,6 @@ const areaTasks = document.querySelector(".tarefas");
 const areaRemoveActivity = document.querySelector("#atividade-de-excluir");
 const areaEditActivity = document.querySelector("#atividade-de-editar");
 const areaDays = document.querySelector(".area-de-dias");
-const hoje = document.querySelector(".hoje");
 
 //Botões
 const addInDaysBtn = document.querySelector("#adicionar-de-dias");
@@ -105,6 +103,7 @@ function compararDatas(a, b) {
     }
     return cmp;
 }
+
 function atualizarListaTarefas() {
     areaTasks.innerHTML = "";
     for (let i = 0; i < listaTarefas.length; i++) {
