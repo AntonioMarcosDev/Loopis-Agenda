@@ -92,9 +92,19 @@ function janelaEditar(event) {
 
 function removerDiasVazios() {
     let datasDasTarefas = Array.from(new Set(listaTarefas.map(c => c.data)));
-    listaDias = datasDasTarefas;
+    listaDias = [localeDate, ...datasDasTarefas];
 }
 
+function compararDatas(a, b) {
+    let [a_dia, a_mes, a_ano] = a.split('/');
+    let [b_dia, b_mes, b_ano] = b.split('/');
+    let cmp = a_ano - b_ano;
+    if (cmp === 0) {
+        cmp = a_mes - b_mes;
+        (cmp === 0) ? cmp = a_dia - b_dia : 0;
+    }
+    return cmp;
+}
 function atualizarListaTarefas() {
     areaTasks.innerHTML = "";
     for (let i = 0; i < listaTarefas.length; i++) {
@@ -120,26 +130,14 @@ function atualizarListaTarefas() {
             task.appendChild(buttonRemove);
             areaTasks.appendChild(task);
         }
-        localStorage.setItem("tarefas", JSON.stringify(listaTarefas));
     }
-
+    localStorage.setItem("tarefas", JSON.stringify(listaTarefas));
 }
 
 function atualizarDias() {
     areaDays.innerHTML = "";
     listaDias = Array.from(new Set(listaDias));
-    listaDias.sort(function (a, b) {
-        let [a_dia, a_mes, a_ano] = a.split('/');
-        let [b_dia, b_mes, b_ano] = b.split('/');
-        let cmp = a_ano - b_ano;
-        if (cmp === 0) {
-            cmp = a_mes - b_mes;
-            if (cmp === 0) {
-                cmp = a_dia - b_dia;
-            }
-        }
-        return cmp;
-    });
+    listaDias.sort(compararDatas);
     for (let i = 0; i < listaDias.length; i++) {
         const dia = listaDias[i];
         const day = document.createElement("button");
@@ -162,8 +160,8 @@ function atualizarDias() {
         day.appendChild(year);
         day.appendChild(hojeAux);
         areaDays.appendChild(day);
-        localStorage.setItem("dias", JSON.stringify(listaDias));
     }
+    localStorage.setItem("dias", JSON.stringify(listaDias));
 }
 
 function inserirPrimeiroDia() {
@@ -196,14 +194,11 @@ addInTaskBtn.addEventListener("click", () => {
 
 formAdd.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (inputAddDate.value.split("-").reverse().join("/") === localeDate) {
-        listaTarefas.push({
-            nome: inputAddName.value,
-            detalhes: inputAddTask.value,
-            data: inputAddDate.value.split("-").reverse().join("/"),
-        })
-        atualizarDias();
-        atualizarListaTarefas();
+    let verificarDatas = compararDatas(inputAddDate.value.split("-").reverse().join("/"), localeDate);
+    if (verificarDatas < 0) {
+        window.alert(`A data inserida: ${inputAddDate.value.split("-").reverse().join("/")} é inválida, pois esse dia já aconteceu.
+        
+Informe uma data válida, por favor.`)
     } else {
         listaDias.push(inputAddDate.value.split("-").reverse().join("/"));
         listaTarefas.push({
