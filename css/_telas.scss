@@ -13,7 +13,7 @@
     @include telas(none);
 
     #form-de-adicionar {
-        height: 75%;
+        height: 80%;
         width: 60%;
         background: $color03;
         border-radius: 10px;
@@ -34,8 +34,8 @@
         }
 
         label {
-            padding-left: 11%;
-            margin-top: 10px;
+            padding-left: 10%;
+            margin-top: 20px;
             align-self: flex-start;
             font-size: 1.2rem;
         }
@@ -101,7 +101,7 @@
     @include telas(none);
 
     #form-de-editar {
-        height: 75%;
+        height: 80%;
         width: 60%;
         background: $color03;
         border-radius: 10px;
@@ -118,8 +118,8 @@
         }
 
         label {
-            padding-left: 11%;
-            margin-top: 10px;
+            padding-left: 10%;
+            margin-top: 20px;
             align-self: flex-start;
             font-size: 1.2rem;
         }

@@ -72,7 +72,7 @@ picture {
   z-index: 2;
 }
 #tela-de-adicionar #form-de-adicionar {
-  height: 75%;
+  height: 80%;
   width: 60%;
   background: #C5C5C4;
   border-radius: 10px;
@@ -92,8 +92,8 @@ picture {
   font-weight: normal;
 }
 #tela-de-adicionar #form-de-adicionar label {
-  padding-left: 11%;
-  margin-top: 10px;
+  padding-left: 10%;
+  margin-top: 20px;
   align-self: flex-start;
   font-size: 1.2rem;
 }
@@ -158,7 +158,7 @@ picture {
   z-index: 2;
 }
 #tela-de-editar #form-de-editar {
-  height: 75%;
+  height: 80%;
   width: 60%;
   background: #C5C5C4;
   border-radius: 10px;
@@ -174,8 +174,8 @@ picture {
   align-items: center;
 }
 #tela-de-editar #form-de-editar label {
-  padding-left: 11%;
-  margin-top: 10px;
+  padding-left: 10%;
+  margin-top: 20px;
   align-self: flex-start;
   font-size: 1.2rem;
 }
