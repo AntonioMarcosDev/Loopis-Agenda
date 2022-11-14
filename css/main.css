@@ -301,11 +301,11 @@ picture {
   justify-content: center;
   background: #E7E7E7;
   text-align: center;
-  height: 15vh;
+  min-height: 180px;
   width: 12vw;
   border-radius: 20px;
   font-size: 1.2rem;
-  margin: 5px 0px;
+  margin: 10px 0px;
 }
 .container-de-dias .area-de-dias .dia .hoje {
   background: #AFAEAE;
