@@ -1,4 +1,4 @@
-# Desafio Proposto no Precesso Seletivo da Empresa Loopis Jr.
+# Desafio Proposto no Processo Seletivo da Loopis Jr.
 
 **Projeto Loopis Agenda feito para o processo seletivo da empresa Loopis Jr**
 
@@ -10,11 +10,11 @@ O site é bastante intuitivo, com o botão de "Começar" você será direcionado
 
 Nessa página, uma tela com a sugestão do dia de hoje será exibida como sugestão, mas ao inserir as atividades você pode escolher qualquer dia no futuro.
 
-É possivel navegar pelos dias no canto esquerdo da tela.
+É possível navegar pelos dias no canto esquerdo da tela.
 
 Assim que a atividade for adicionada, ela será exibida no dia correspondente.
 
-Apagar e editar as atividades nunca foi tão simples, basta selecionar no icone a função desejada e confirmar a ação.
+Apagar e editar as atividades nunca foi tão simples, basta selecionar no ícone a função desejada e confirmar a ação.
 
 
 ### Linguagens utilizadas
