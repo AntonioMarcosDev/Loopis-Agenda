@@ -29,12 +29,15 @@
             width: 20vw;
             line-height: 10vh;
             border-radius: 20px;
+            font-size: 2rem;
+            font-weight: normal;
         }
 
         label {
-            padding-left: 10%;
+            padding-left: 11%;
             margin-top: 10px;
             align-self: flex-start;
+            font-size: 1.2rem;
         }
 
         #nome-da-tarefa,
@@ -44,7 +47,8 @@
             outline: none;
             border: none;
             margin: 5px 0px;
-            padding: 0px 15px;
+            padding: 0px 20px;
+            font-size: 1.2rem;
         }
 
         #nome-da-tarefa {
@@ -53,8 +57,9 @@
         }
 
         #tarefa {
-            height: 150px;
-            font-size: 1.2rem;
+            resize: none;
+            padding: 20px;
+            height: 120px;
         }
 
         #data {
@@ -113,9 +118,10 @@
         }
 
         label {
-            padding-left: 10%;
+            padding-left: 11%;
             margin-top: 10px;
             align-self: flex-start;
+            font-size: 1.2rem;
         }
 
         #nome-da-tarefa-editar,
@@ -125,7 +131,8 @@
             outline: none;
             border: none;
             margin: 5px 0px;
-            padding: 0px 15px;
+            padding: 0px 20px;
+            font-size: 1.2rem;
         }
 
         #nome-da-tarefa-editar {
@@ -134,8 +141,9 @@
         }
 
         #tarefa-editar {
-            height: 150px;
-            font-size: 1.2rem;
+            resize: none;
+            padding: 20px;
+            height: 120px;
         }
 
         #data-editar {

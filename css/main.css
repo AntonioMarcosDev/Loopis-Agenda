@@ -88,11 +88,14 @@ picture {
   width: 20vw;
   line-height: 10vh;
   border-radius: 20px;
+  font-size: 2rem;
+  font-weight: normal;
 }
 #tela-de-adicionar #form-de-adicionar label {
-  padding-left: 10%;
+  padding-left: 11%;
   margin-top: 10px;
   align-self: flex-start;
+  font-size: 1.2rem;
 }
 #tela-de-adicionar #form-de-adicionar #nome-da-tarefa,
 #tela-de-adicionar #form-de-adicionar #tarefa {
@@ -101,15 +104,17 @@ picture {
   outline: none;
   border: none;
   margin: 5px 0px;
-  padding: 0px 15px;
+  padding: 0px 20px;
+  font-size: 1.2rem;
 }
 #tela-de-adicionar #form-de-adicionar #nome-da-tarefa {
   height: 50px;
   background: #AFAEAE;
 }
 #tela-de-adicionar #form-de-adicionar #tarefa {
-  height: 150px;
-  font-size: 1.2rem;
+  resize: none;
+  padding: 20px;
+  height: 120px;
 }
 #tela-de-adicionar #form-de-adicionar #data {
   height: 5vh;
@@ -169,9 +174,10 @@ picture {
   align-items: center;
 }
 #tela-de-editar #form-de-editar label {
-  padding-left: 10%;
+  padding-left: 11%;
   margin-top: 10px;
   align-self: flex-start;
+  font-size: 1.2rem;
 }
 #tela-de-editar #form-de-editar #nome-da-tarefa-editar,
 #tela-de-editar #form-de-editar #tarefa-editar {
@@ -180,15 +186,17 @@ picture {
   outline: none;
   border: none;
   margin: 5px 0px;
-  padding: 0px 15px;
+  padding: 0px 20px;
+  font-size: 1.2rem;
 }
 #tela-de-editar #form-de-editar #nome-da-tarefa-editar {
   height: 50px;
   background: #AFAEAE;
 }
 #tela-de-editar #form-de-editar #tarefa-editar {
-  height: 150px;
-  font-size: 1.2rem;
+  resize: none;
+  padding: 20px;
+  height: 120px;
 }
 #tela-de-editar #form-de-editar #data-editar {
   height: 5vh;
@@ -347,16 +355,16 @@ picture {
   width: 20vw;
   border-radius: 20px;
   font-size: 1.5rem;
+  margin-bottom: 2%;
 }
 .container-de-tarefas .area-de-tarefas .tarefas {
-  height: 60%;
-  width: 85%;
+  height: 70%;
+  width: 90%;
   overflow-y: auto;
 }
 .container-de-tarefas .area-de-tarefas .tarefas .task {
   background: #AFAEAE;
-  position: relative;
-  height: 100px;
+  height: 120px;
   width: 100%;
   border-radius: 30px;
   display: flex;
@@ -366,10 +374,14 @@ picture {
   margin-bottom: 20px;
 }
 .container-de-tarefas .area-de-tarefas .tarefas .task h1 {
-  text-align: justify;
-  line-height: 80px;
-  width: 20%;
-  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100px;
+  width: 25%;
+  padding: 0px 10px;
+  word-wrap: break-word;
 }
 .container-de-tarefas .area-de-tarefas .tarefas .task h1::after {
   content: ":";
@@ -380,8 +392,8 @@ picture {
   align-items: center;
   justify-content: center;
   background-color: #C5C5C4;
-  height: 80px;
-  width: 65%;
+  height: 100px;
+  width: 60%;
   text-align: center;
   border-radius: 30px;
   padding: 5px;
@@ -410,7 +422,7 @@ picture {
   font-size: 1.2rem;
   background: #FEDB71;
   border-radius: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .container-de-tarefas .area-de-tarefas #adicionar-de-tarefas:hover {
   background: #fee8a4;

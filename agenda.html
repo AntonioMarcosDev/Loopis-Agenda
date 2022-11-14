@@ -36,9 +36,9 @@
         <form id="form-de-adicionar" autocomplete="off">
             <h1>Nova Atividade</h1>
             <label for="nome-da-tarefa">Nome:</label>
-            <input type="text" id="nome-da-tarefa" placeholder="Escreva a atividade" required>
+            <input type="text" id="nome-da-tarefa" placeholder="Escreva a atividade" maxlength="30" required>
             <label for="tarefa">Descrição:</label>
-            <input type="text" id="tarefa" placeholder="Escreva a descrição" required>
+            <textarea id="tarefa" cols="30" rows="10" placeholder="Escreva a descrição" required></textarea>
             <label for="data">Data:</label>
             <input type="date" id="data" required>
             <button id="adicionar-de-adicionar">Adicionar</button>
@@ -46,15 +46,17 @@
     </section>
     <!--Tela de editar tarefas-->
     <section id="tela-de-editar">
-        <div id="form-de-editar" autocomplete="off">
+        <div id="form-de-editar">
             <div class="texto-de-editar">
                 <p>Atividade: </p>
                 <p id="atividade-de-editar"></p>
             </div>
             <label for="nome-da-tarefa-editar">Nome:</label>
-            <input type="text" id="nome-da-tarefa-editar" placeholder="Escreva a atividade" required>
+            <input type="text" id="nome-da-tarefa-editar" placeholder="Escreva a atividade" maxlength="30"
+                autocomplete="off" required>
             <label for="tarefa-editar">Descrição:</label>
-            <input type="text" id="tarefa-editar" placeholder="Escreva a descrição" required>
+            <textarea id="tarefa-editar" cols="30" rows="10" placeholder="Escreva a descrição" autocomplete="off"
+                required></textarea>
             <label for="data-editar">Data:</label>
             <input type="date" id="data-editar" required>
             <div class="botoes">
