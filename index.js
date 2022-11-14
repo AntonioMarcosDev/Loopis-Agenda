@@ -78,7 +78,7 @@ function janelaEditar(event) {
     areaEditActivity.innerHTML = "<strong>" + listaTarefas[index].nome + "</strong>";
     inputEditName.value = listaTarefas[index].nome;
     inputEditTask.value = listaTarefas[index].detalhes;
-    inputEditDate.valueAsDate = new Date(Date.UTC(Number(listaTarefas[index].data.slice(6, 10)), Number(listaTarefas[index].data.slice(3, 5)), Number(listaTarefas[index].data.slice(0, 2))))
+    inputEditDate.valueAsDate = new Date(Date.UTC(Number(listaTarefas[index].data.slice(6, 10)), (Number(listaTarefas[index].data.slice(3, 5)) - 1), Number(listaTarefas[index].data.slice(0, 2))))
     windowEdit.style.display = "flex";
     btnWindowEditCancel.addEventListener("click", () => {
         windowEdit.style.display = "none";
@@ -90,7 +90,11 @@ function janelaEditar(event) {
 
 function removerDiasVazios() {
     let datasDasTarefas = Array.from(new Set(listaTarefas.map(c => c.data)));
-    listaDias = [localeDate, ...datasDasTarefas];
+    if (!datasDasTarefas.length) {
+        listaDias = [localeDate];
+    } else {
+        listaDias = [...datasDasTarefas];
+    }
 }
 
 function compararDatas(a, b) {
