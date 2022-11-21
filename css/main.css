@@ -7,11 +7,16 @@
   font-family: "Rufina", serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   display: flex;
   height: 100vh;
   width: 100vw;
   align-items: center;
+  justify-content: center;
   background: #373030;
 }
 body a,
@@ -19,48 +24,56 @@ body button {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: background ease-in-out 300ms;
 }
 
-.container-de-texto-home {
+#home {
+  display: flex;
+  padding: 10px;
+  color: #E7E7E7;
+}
+#home .container-da-home {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 70vh;
-  width: 40vw;
+}
+#home .container-da-home .texto-home {
   text-align: center;
-  padding: 5px;
-  color: #E7E7E7;
-}
-.container-de-texto-home .texto-home {
-  height: 100%;
   min-width: 275px;
-  max-width: 295px;
+  max-width: 50%;
+  padding: 0px 8%;
 }
-.container-de-texto-home .texto-home h1 {
-  font-size: 4rem;
-  margin-bottom: 30px;
+#home .container-da-home .texto-home h1 {
+  font-size: 5rem;
+  margin-bottom: 10%;
 }
-.container-de-texto-home .texto-home p {
-  font-size: 1.5rem;
+#home .container-da-home .texto-home p {
+  font-size: 2.5rem;
+  margin-bottom: 20%;
 }
-.container-de-texto-home button {
-  font-size: 1.5rem;
-  height: 80px;
+#home .container-da-home button {
+  font-size: 2.5rem;
+  min-height: 60px;
   min-width: 275px;
-  width: 20vw;
   border-radius: 40px;
   background: #F2C46D;
 }
-.container-de-texto-home button:hover {
+#home .container-da-home button:hover {
   background: #f6d79c;
 }
-
-picture {
-  width: 60vw;
+#home picture {
   text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+  #home {
+    flex-direction: column;
+  }
+  #home .container-da-home button {
+    margin-bottom: 100px;
+  }
+}
 #tela-de-adicionar {
   display: none;
   position: absolute;
@@ -79,13 +92,13 @@ picture {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 1%;
 }
 #tela-de-adicionar #form-de-adicionar h1 {
   background-color: #AFAEAE;
   margin: 20px auto;
   text-align: center;
-  width: 20vw;
+  width: 60%;
   line-height: 10vh;
   border-radius: 20px;
   font-size: 2rem;
@@ -93,9 +106,9 @@ picture {
 }
 #tela-de-adicionar #form-de-adicionar label {
   padding-left: 10%;
-  margin-top: 20px;
+  margin-top: 2%;
   align-self: flex-start;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #tela-de-adicionar #form-de-adicionar #nome-da-tarefa,
 #tela-de-adicionar #form-de-adicionar #tarefa {
@@ -105,36 +118,36 @@ picture {
   border: none;
   margin: 5px 0px;
   padding: 0px 20px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #tela-de-adicionar #form-de-adicionar #nome-da-tarefa {
-  height: 50px;
+  height: 7%;
   background: #AFAEAE;
 }
 #tela-de-adicionar #form-de-adicionar #tarefa {
   resize: none;
   padding: 20px;
-  height: 120px;
+  height: 20%;
 }
 #tela-de-adicionar #form-de-adicionar #data {
-  height: 5vh;
-  width: 25vh;
+  height: 7%;
+  width: 25%;
   background: #AFAEAE;
   text-align: center;
   border: none;
   outline: none;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   align-self: flex-start;
   margin: 5px 0px 0px 10%;
 }
 #tela-de-adicionar #form-de-adicionar #adicionar-de-adicionar {
   background: #4EBF6B;
-  height: 5vh;
-  width: 15vw;
+  height: 8%;
+  width: 20%;
   margin: auto;
   border-radius: 30px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #tela-de-adicionar #form-de-adicionar #adicionar-de-adicionar:hover {
   background: #73cd8a;
@@ -165,19 +178,19 @@ picture {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 1%;
 }
 #tela-de-editar #form-de-editar .texto-de-editar {
   display: flex;
-  font-size: 1.2rem;
-  height: 100px;
+  font-size: 1.5rem;
+  height: 15%;
   align-items: center;
 }
 #tela-de-editar #form-de-editar label {
   padding-left: 10%;
-  margin-top: 20px;
+  margin-top: 2%;
   align-self: flex-start;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #tela-de-editar #form-de-editar #nome-da-tarefa-editar,
 #tela-de-editar #form-de-editar #tarefa-editar {
@@ -187,10 +200,10 @@ picture {
   border: none;
   margin: 5px 0px;
   padding: 0px 20px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #tela-de-editar #form-de-editar #nome-da-tarefa-editar {
-  height: 50px;
+  height: 7%;
   background: #AFAEAE;
 }
 #tela-de-editar #form-de-editar #tarefa-editar {
@@ -199,23 +212,23 @@ picture {
   height: 120px;
 }
 #tela-de-editar #form-de-editar #data-editar {
-  height: 5vh;
-  width: 25vh;
+  height: 7%;
+  width: 25%;
   background: #AFAEAE;
   text-align: center;
   border: none;
   outline: none;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   align-self: flex-start;
   margin: 5px 0px 0px 10%;
 }
 #tela-de-editar #form-de-editar #cancelar-de-editar,
 #tela-de-editar #form-de-editar #salvar-de-editar {
   height: 5vh;
-  width: 15vw;
+  width: 35%;
   border-radius: 30px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #tela-de-editar #form-de-editar #cancelar-de-editar {
   background: #AFAEAE;
@@ -248,10 +261,10 @@ picture {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 1%;
 }
 #tela-de-excluir #container-de-excluir .texto-de-excluir {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 #tela-de-excluir #container-de-excluir .texto-de-excluir #atividade {
@@ -260,8 +273,8 @@ picture {
 #tela-de-excluir #container-de-excluir #cancelar-de-excluir,
 #tela-de-excluir #container-de-excluir #excluir-de-excluir {
   height: 5vh;
-  width: 6vw;
-  font-size: 1.2rem;
+  width: 30%;
+  font-size: 1.5rem;
 }
 #tela-de-excluir #container-de-excluir #cancelar-de-excluir {
   background: #AFAEAE;
@@ -276,18 +289,41 @@ picture {
   background: #f69292;
 }
 
+@media only screen and (max-width: 768px) {
+  #tela-de-adicionar #form-de-adicionar {
+    width: 80%;
+    height: 80%;
+  }
+  #tela-de-adicionar #form-de-adicionar #data {
+    width: 40%;
+  }
+  #tela-de-adicionar #form-de-adicionar #adicionar-de-adicionar {
+    width: 40%;
+  }
+  #tela-de-editar #form-de-editar {
+    width: 80%;
+    height: 80%;
+  }
+  #tela-de-editar #form-de-editar #data-editar {
+    width: 40%;
+  }
+  #tela-de-excluir #container-de-excluir {
+    width: 80%;
+    height: 20%;
+  }
+}
 .container-de-dias {
   background: #202148;
   height: 100vh;
   width: 15vw;
+  min-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 30px;
 }
 .container-de-dias .area-de-dias {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -301,27 +337,28 @@ picture {
   justify-content: center;
   background: #E7E7E7;
   text-align: center;
-  min-height: 180px;
-  width: 12vw;
+  min-height: 150px;
+  width: 100%;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 10px 0px;
 }
 .container-de-dias .area-de-dias .dia .hoje {
   background: #AFAEAE;
   line-height: 30px;
-  width: 8vw;
+  width: 70%;
   margin-top: 10px;
   border-radius: 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .container-de-dias #adicionar-de-dias {
   background: #FEDB71;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 40px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
+  font-weight: bolder;
 }
 .container-de-dias #adicionar-de-dias:hover {
   background: #fee8a4;
@@ -342,7 +379,7 @@ picture {
   height: 95%;
   width: 95%;
   background: #C5C5C4;
-  padding: 20px;
+  padding: 20px 0px;
 }
 .container-de-tarefas .area-de-tarefas .titulo-de-tarefas {
   display: flex;
@@ -352,10 +389,11 @@ picture {
   justify-content: center;
   text-align: center;
   height: 150px;
+  min-width: 260px;
   width: 20vw;
   border-radius: 20px;
-  font-size: 1.5rem;
-  margin-bottom: 2%;
+  font-size: 2rem;
+  margin-bottom: 5%;
 }
 .container-de-tarefas .area-de-tarefas .tarefas {
   height: 70%;
@@ -364,22 +402,22 @@ picture {
 }
 .container-de-tarefas .area-de-tarefas .tarefas .task {
   background: #AFAEAE;
-  height: 120px;
+  height: 20%;
   width: 100%;
   border-radius: 30px;
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
-  padding: 10px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  padding: 1%;
+  margin-bottom: 2%;
 }
 .container-de-tarefas .area-de-tarefas .tarefas .task h1 {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100px;
-  width: 25%;
+  height: 100%;
+  width: 20%;
   padding: 0px 10px;
   word-wrap: break-word;
 }
@@ -392,7 +430,7 @@ picture {
   align-items: center;
   justify-content: center;
   background-color: #C5C5C4;
-  height: 100px;
+  height: 100%;
   width: 60%;
   text-align: center;
   border-radius: 30px;
@@ -417,13 +455,58 @@ picture {
   background-position: center;
 }
 .container-de-tarefas .area-de-tarefas #adicionar-de-tarefas {
-  height: 5vh;
-  width: 20vw;
-  font-size: 1.2rem;
+  height: 80px;
+  width: 30%;
+  font-size: 2rem;
   background: #FEDB71;
   border-radius: 20px;
   margin-bottom: 50px;
 }
 .container-de-tarefas .area-de-tarefas #adicionar-de-tarefas:hover {
   background: #fee8a4;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    flex-direction: column;
+  }
+  .container-de-dias {
+    height: 30vh;
+    width: 100vw;
+    align-items: center;
+    padding: 10px;
+  }
+  .container-de-dias .area-de-dias {
+    flex-direction: row;
+    padding: 0;
+    overflow-x: auto;
+  }
+  .container-de-dias .area-de-dias .dia {
+    min-height: 18vh;
+    min-width: 100px;
+    margin: 0px 10px;
+  }
+  .container-de-tarefas {
+    height: 80vh;
+    width: 100vw;
+  }
+  .container-de-tarefas .area-de-tarefas .tarefas {
+    width: 95%;
+  }
+  .container-de-tarefas .area-de-tarefas .tarefas .task {
+    width: 100%;
+  }
+  .container-de-tarefas .area-de-tarefas .tarefas .task .editor,
+.container-de-tarefas .area-de-tarefas .tarefas .task .removedor {
+    height: 60%;
+    width: 8%;
+  }
+  .container-de-tarefas .area-de-tarefas #adicionar-de-tarefas {
+    font-size: 1.5rem;
+    width: 60%;
+    margin-bottom: 5px;
+  }
 }/*# sourceMappingURL=main.css.map */

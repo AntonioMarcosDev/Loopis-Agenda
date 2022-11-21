@@ -20,13 +20,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 1%;
 
         h1 {
             background-color: $color04;
             margin: 20px auto;
             text-align: center;
-            width: 20vw;
+            width: 60%;
             line-height: 10vh;
             border-radius: 20px;
             font-size: 2rem;
@@ -35,9 +35,9 @@
 
         label {
             padding-left: 10%;
-            margin-top: 20px;
+            margin-top: 2%;
             align-self: flex-start;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         #nome-da-tarefa,
@@ -48,40 +48,40 @@
             border: none;
             margin: 5px 0px;
             padding: 0px 20px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         #nome-da-tarefa {
-            height: 50px;
+            height: 7%;
             background: $color04;
         }
 
         #tarefa {
             resize: none;
             padding: 20px;
-            height: 120px;
+            height: 20%;
         }
 
         #data {
-            height: 5vh;
-            width: 25vh;
+            height: 7%;
+            width: 25%;
             background: $color04;
             text-align: center;
             border: none;
             outline: none;
             border-radius: 20px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             align-self: flex-start;
             margin: 5px 0px 0px 10%;
         }
 
         #adicionar-de-adicionar {
             background: $color07;
-            height: 5vh;
-            width: 15vw;
+            height: 8%;
+            width: 20%;
             margin: auto;
             border-radius: 30px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
 
             &:hover {
                 background: lighten($color07, $amount: 10);
@@ -108,20 +108,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 1%;
 
         .texto-de-editar {
             display: flex;
-            font-size: 1.2rem;
-            height: 100px;
+            font-size: 1.5rem;
+            height: 15%;
             align-items: center;
         }
 
         label {
             padding-left: 10%;
-            margin-top: 20px;
+            margin-top: 2%;
             align-self: flex-start;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         #nome-da-tarefa-editar,
@@ -132,11 +132,11 @@
             border: none;
             margin: 5px 0px;
             padding: 0px 20px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         #nome-da-tarefa-editar {
-            height: 50px;
+            height: 7%;
             background: $color04;
         }
 
@@ -147,14 +147,14 @@
         }
 
         #data-editar {
-            height: 5vh;
-            width: 25vh;
+            height: 7%;
+            width: 25%;
             background: $color04;
             text-align: center;
             border: none;
             outline: none;
             border-radius: 20px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             align-self: flex-start;
             margin: 5px 0px 0px 10%;
         }
@@ -162,9 +162,9 @@
         #cancelar-de-editar,
         #salvar-de-editar {
             height: 5vh;
-            width: 15vw;
+            width: 35%;
             border-radius: 30px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         #cancelar-de-editar {
@@ -196,10 +196,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 1%;
 
         .texto-de-excluir {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             text-align: center;
 
             #atividade {
@@ -210,8 +210,8 @@
         #cancelar-de-excluir,
         #excluir-de-excluir {
             height: 5vh;
-            width: 6vw;
-            font-size: 1.2rem;
+            width: 30%;
+            font-size: 1.5rem;
         }
 
         #cancelar-de-excluir {
@@ -228,6 +228,42 @@
             &:hover {
                 background: lighten($color08, $amount: 10);
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #tela-de-adicionar {
+        #form-de-adicionar {
+            width: 80%;
+            height: 80%;
+
+            #data {
+                width: 40%;
+            }
+
+            #adicionar-de-adicionar {
+                width: 40%;
+            }
+        }
+    }
+
+    #tela-de-editar {
+        #form-de-editar {
+            width: 80%;
+            height: 80%;
+
+            #data-editar {
+                width: 40%;
+            }
+        }
+    }
+
+    #tela-de-excluir {
+        #container-de-excluir {
+            width: 80%;
+            height: 20%;
         }
     }
 }

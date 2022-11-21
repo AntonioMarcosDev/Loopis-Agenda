@@ -5,11 +5,16 @@
     font-family: 'Rufina', serif;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     display: flex;
     height: 100vh;
     width: 100vw;
     align-items: center;
+    justify-content: center;
     background: $color01;
 
     a,
@@ -17,5 +22,6 @@ body {
         border: none;
         outline: none;
         cursor: pointer;
+        transition: background ease-in-out 300ms;
     }
 }
